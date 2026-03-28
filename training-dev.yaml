@@ -1,0 +1,42 @@
+server:
+  port: 9095
+
+management:
+  endpoint:
+    configprops:
+      show-values: ALWAYS
+    env:
+      show-values: ALWAYS
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      path-mapping:
+        health: devHealthCheck
+      base-path: /devAdmin
+  metrics:
+    distribution:
+      percentiles:
+        http:
+          server:
+            requests: 0.5,0.9, 0.99
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+
+
+students:
+  list:
+    - id: 1
+      name: Manoj
+      course: Spring boot microservices
+      email: manoj@gmail.com
+    - id: 2
+      name: Dinesh
+      course: JavaScript
+      email: dinesh@gmail.com
+    - id: 3
+      name: Sharat
+      course: React
+      email: sharat@gmail.com
