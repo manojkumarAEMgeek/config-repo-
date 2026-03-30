@@ -13,7 +13,7 @@ management:
         include: '*'
       path-mapping:
         health: prodHealthCheck
-      base-path: /prodAdmin
+      base-path: /prodProfile
   metrics:
     distribution:
       percentiles:
