@@ -13,7 +13,7 @@ management:
         include: '*'
       path-mapping:
         health: devHealthCheck
-      base-path: /devAdmin
+      base-path: /devProfile
   metrics:
     distribution:
       percentiles:
